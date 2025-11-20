@@ -2,8 +2,7 @@ import { Container, Row } from 'react-bootstrap';
 import  ProyectCard from '../components/organisms/ProyectCard.jsx';
 import Proyecto from '../Data/Producto.js';
 import '../styles/pages/card.css'
-import '../styles/pages/Home.css'
-import "../styles/pages/contacto.css"
+import '../styles/pages/HomeUser.css'
 
 
 function HomeUser() {
