@@ -1,19 +1,19 @@
-import React from "react";
+import
 
-function Link ({href, children, target = '', className = '',...props}) {
-    return(
-        <a
-        href={href}
-        target={target}
-        rel={target == '_blank' ? 'nooper noreferrer' : undefined}
-        className={`Link ${className}`}
-        {...props}
-        >
-            {children}
+function Link({ 
+  href, 
+  children, 
+  external = false,
+  className = '',
+  ...props 
+}) {
+  const linkProps = external ? { target: '_blank', rel: 'noopener noreferrer' } : {};
 
-        </a>
-
-    );
-
+  return (
+    <a href={href} className={className} {...linkProps} {...props}>
+      {children}
+    </a>
+  );
 }
+
 export default Link;
